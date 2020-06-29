@@ -1,0 +1,22 @@
+#
+#  Copyright 2019 - 2020 The XOrange Studio. All rights reserved.
+#  Use of this source code is governed by a BSD-style license that can be
+#  found in the LICENSE.md file.
+#
+
+#  Internal files.
+/internal/
+
+#  Unit test.
+*.selftest.js
+*.selftest.json
+
+#  Old files.
+*.old
+
+#  Backup files.
+*.bak
+*.bak.*
+
+#  Dependency directories
+/node_modules/
