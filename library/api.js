@@ -9,6 +9,7 @@
 //
 
 //  Imported modules.
+const XaError = require("./../error");
 const DspAmplify = require("./../dsp/amplify");
 const DspHighPass = require("./../dsp/high-pass");
 const DspIO = require("./../dsp/io");
@@ -18,11 +19,17 @@ const DspTrimmer = require("./../dsp/trimmer");
 
 //  Export public APIs.
 module.exports = {
-    "Amplify": DspAmplify.Amplify,
-    "HighPass": DspHighPass.HighPass,
-    "ReadDataS16LE": DspIO.ReadDataS16LE,
-    "WriteDataS16LE": DspIO.WriteDataS16LE,
-    "LowPass": DspLowPass.LowPass,
-    "Resample": DspResampler.Resample,
-    "Trim": DspTrimmer.Trim
+    "Core": {
+        "Amplify": DspAmplify.Amplify,
+        "HighPass": DspHighPass.HighPass,
+        "ReadDataS16LE": DspIO.ReadDataS16LE,
+        "WriteDataS16LE": DspIO.WriteDataS16LE,
+        "LowPass": DspLowPass.LowPass,
+        "Resample": DspResampler.Resample,
+        "Trim": DspTrimmer.Trim,
+    },
+    "Error": {
+        "XAPDspError": XaError.XAPDspError,
+        "XAPDspParameterError": XaError.XAPDspParameterError
+    }
 };
