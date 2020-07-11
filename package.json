@@ -1,6 +1,6 @@
 {
   "name": "xaplibrary-dsp",
-  "version": "1.0.0-alpha2",
+  "version": "1.0.0-alpha3",
   "description": "XAP digital signal processing library.",
   "main": "library/api.js",
   "scripts": {
