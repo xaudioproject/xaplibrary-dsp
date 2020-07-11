@@ -122,3 +122,30 @@ XAP digital signal processing error.
 #### (Class) XAPLibDSP.Error.XAPDspParameterError
 
 XAP digital signal processing parameter error.
+
+## For developer
+
+### How to release
+
+1. Rolled package version.
+
+Changed the 'version' item of the following file.
+
+- package.json
+- package-lock.json
+
+And commit changes to the git repository.
+
+2. Packs the current package folder, as following command:
+
+```
+npm pack
+```
+
+Generate the checksums of the SHA256 algorithm, such as POSIX command:
+
+```
+shasum -a 256 xaplibrary-dsp-{VERSION}.tgz > xaplibrary-dsp-{VERSION}.tgz.sha256
+```
+
+3. Copy the 'xaplibrary-dsp-{VERSION}.tgz' and 'xaplibrary-dsp-{VERSION}.tgz.sha256' to XAP NPM server.
